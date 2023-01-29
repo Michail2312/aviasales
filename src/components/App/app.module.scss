@@ -1,0 +1,59 @@
+@import '../../vars';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $openSans;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 232px 502px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loader {
+  border-radius: 3px;
+  animation: loader 3s linear infinite;
+  background-image: linear-gradient(
+    45deg,
+    $loaderGradient 25%,
+    transparent 50%,
+    transparent 50%,
+    $loaderGradient 0,
+    $loaderGradient 75%,
+    transparent 75%,
+    transparent
+  ) !important;
+  background-size: 3rem 3rem !important;
+}
+
+@keyframes loader {
+  0% {
+    background-position-x: 9rem;
+  }
+}
